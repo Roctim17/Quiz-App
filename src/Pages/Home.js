@@ -1,6 +1,7 @@
 import { Button, MenuItem, TextField } from "@material-ui/core";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 import Categories from "../Component/Categories";
 import "./Home.css";
 
@@ -9,7 +10,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
     const [category, setCategory] = useState("");
     const [difficulty, setDifficulty] = useState("");
     const [error, setError] = useState(false);
-
+    const navigation = useNavigate()
 
 
 
@@ -20,7 +21,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
         } else {
             setError(false);
             fetchQuestions(category, difficulty);
-
+            navigation("/quiz");
         }
     };
 
@@ -34,7 +35,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
                         style={{ marginBottom: 25 }}
                         label="Enter Your Name"
                         variant="outlined"
-                        onChange={(e) => setName(e.target.value)}
+                        onBlur={(e) => setName(e.target.value)}
                     />
                     <TextField
                         select
