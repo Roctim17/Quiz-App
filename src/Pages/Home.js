@@ -1,4 +1,4 @@
-import { Button, MenuItem, TextField } from "@material-ui/core";
+import { MenuItem, TextField } from "@material-ui/core";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
@@ -28,7 +28,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
     return (
         <div className="content">
             <div className="settings">
-                <span style={{ fontSize: 30 }}>Quiz Settings</span>
+                <span style={{ fontSize: 30 }}>Chose Your Option</span>
                 <div className="settings__select">
                     {error && toast.error("Please Fill all the feilds")}
                     <TextField
@@ -69,17 +69,16 @@ const Home = ({ name, setName, fetchQuestions }) => {
                             Hard
                         </MenuItem>
                     </TextField>
-                    <Button
+                    <button className="btn btn-info"
                         variant="contained"
-                        color="primary"
                         size="large"
                         onClick={handleSubmit}
                     >
                         Start Quiz
-                    </Button>
+                    </button>
                 </div>
             </div>
-            <img src="/quiz.svg" className="banner" alt="quiz app" />
+            <img src="https://i.ibb.co/567cV2H/fabulous-quiz-1.png" className="banner" alt="quiz app" />
         </div>
     );
 };

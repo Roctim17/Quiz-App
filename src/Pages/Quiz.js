@@ -24,15 +24,15 @@ const Quiz = ({ name, questions, score, setScore, setQuestions }) => {
     };
 
     return (
-        <div className="quiz">
+        <div className="quiz px-3">
             <span className="subtitle">Welcome, {name}</span>
 
             {questions ? (
                 <>
                     <div className="quizInfo">
                         <span>{questions[currQues].category}</span>
-                        <span>
-                            {questions[currQues].difficulty}
+                        <span className="">
+                            {questions[currQues].difficulty}{'  '}
                             Score : {score}
                         </span>
                     </div>

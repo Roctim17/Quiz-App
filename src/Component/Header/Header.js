@@ -4,9 +4,9 @@ import "./Header.css";
 
 const Header = () => {
     return (
-        <div className="header">
+        <div className="header text-center py-5">
             <Link to="/" className="title">
-                Intuitive Quiz Hub
+                Thrive Quiz challenge
             </Link>
             <hr className="divider" />
         </div>

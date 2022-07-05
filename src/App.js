@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import Quiz from './Pages/Quiz';
 import Result from './Pages/Result';
 import { Toaster } from 'react-hot-toast';
+import Header from './Component/Header/Header';
 
 function App() {
   const [questions, setQuestions] = useState();
@@ -21,7 +22,7 @@ function App() {
   };
   return (
     <div className="app" >
-
+      <Header></Header>
       <Routes>
         <Route path="/" element={
           <Home
