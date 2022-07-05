@@ -5,6 +5,7 @@ import axios from 'axios';
 import Home from './Pages/Home';
 import Quiz from './Pages/Quiz';
 import Result from './Pages/Result';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   const [questions, setQuestions] = useState();
@@ -45,6 +46,7 @@ function App() {
 
         </Route>
       </Routes>
+      <Toaster />
     </div>
   );
 }
